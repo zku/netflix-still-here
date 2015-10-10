@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Yes Netflix, I'm still here.",
+	"short_name": "NetflixContinuePlaying",
+	"version": "0.0.0.1",
+	"description": "Automatically clicks on the annoying Are-you-still-here?-dialog to continue watching.",
+	"author": "zku",
+
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	
+	"browser_action": {
+		"default_icon": "icon19.png",
+		"default_popup": "popup.html"
+	},
+	
+	"content_scripts": [{
+			"matches": ["http://www.netflix.com/watch/*"],
+			"js": ["jquery-2.1.4.min.js", "extension.js"]
+	}],
+
+	"permissions": [
+		"storage"
+	]
+}
