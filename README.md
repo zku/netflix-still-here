@@ -2,6 +2,8 @@
 
 Automatically clicks the "Continue Playing" button as it pops up.
 
+Google Web Store Link: https://chrome.google.com/webstore/detail/yes-netflix-im-still-here/inbfadkijdcbplmcbjhomnhcecgicfhj
+
 # License
 
 MIT License: https://tldrlegal.com/license/mit-license
