@@ -11,17 +11,24 @@ setTimeout(function() {
 	(document.head || document.documentElement).appendChild(script);
 	script.parentNode.removeChild(script);
 	
-	// Check for the annoying button periodically.
-	var searchText = new RegExp(jQuery('body').attr('i18n-text'));
-	setInterval(function() {
-		chrome.storage.sync.get({enabled: true}, function(items) {
-			if (items.enabled) {
-				jQuery('.continue-playing').each(function() {
-					if (searchText.test(jQuery(this).html())) {
-						jQuery(this).click();
-					}
-				});
-			}
-		});
-	}, 250);
+	setTimeout(function() {
+		// Grab the search text.
+		var n = jQuery('body').attr('i18n-text') || 'Continue Playing';
+		var searchText = new RegExp(n);
+		
+		// Check for the annoying button periodically.
+		setInterval(function() {
+			console.log(n);
+			console.log(searchText);
+			chrome.storage.sync.get({enabled: true}, function(items) {
+				if (items.enabled) {
+					jQuery('.continue-playing').each(function() {
+						if (searchText.test(jQuery(this).html())) {
+							jQuery(this).click();
+						}
+					});
+				}
+			});
+		}, 250);
+	}, 1000);
 }, 3000);

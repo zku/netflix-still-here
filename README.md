@@ -1,8 +1,11 @@
 # Yes Netflix, I'm still here.
 
-Automatically clicks the "Continue Playing" button as it pops up.
+Google Chrome extension: automatically clicks the "Continue Playing" button as it pops up; full Netflix language support.
 
-Google Web Store Link: https://chrome.google.com/webstore/detail/yes-netflix-im-still-here/inbfadkijdcbplmcbjhomnhcecgicfhj
+# Install
+
+* Get it from the Google Web Store: https://chrome.google.com/webstore/detail/yes-netflix-im-still-here/inbfadkijdcbplmcbjhomnhcecgicfhj
+* or download the zip archive and load it manually at `chrome://extensions/`
 
 # License
 
