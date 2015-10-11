@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Yes Netflix, I'm still here.",
 	"short_name": "NetflixContinuePlaying",
-	"version": "0.0.0.1",
+	"version": "0.0.0.2",
 	"description": "Automatically clicks on the annoying Are-you-still-here?-dialog to continue watching.",
 	"author": "zku",
 
@@ -19,7 +19,8 @@
 	
 	"content_scripts": [{
 			"matches": ["http://www.netflix.com/watch/*"],
-			"js": ["jquery-2.1.4.min.js", "extension.js"]
+			"js": ["jquery-2.1.4.min.js", "extension.js"],
+			"run_at": "document_end"
 	}],
 
 	"permissions": [
