@@ -18,8 +18,6 @@ setTimeout(function() {
 		
 		// Check for the annoying button periodically.
 		setInterval(function() {
-			console.log(n);
-			console.log(searchText);
 			chrome.storage.sync.get({enabled: true}, function(items) {
 				if (items.enabled) {
 					jQuery('.continue-playing').each(function() {
